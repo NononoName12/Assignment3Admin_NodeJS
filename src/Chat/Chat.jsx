@@ -21,13 +21,16 @@ function Chat(props) {
   useEffect(() => {
     const fetchActiveRooms = async () => {
       try {
-        const response = await fetch("http://localhost:5000/chat/chatrooms", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        });
+        const response = await fetch(
+          "https://backend-assignment3-odn0.onrender.com/chat/chatrooms",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            credentials: "include",
+          }
+        );
         const rooms = await response.json();
         if (!response.ok) {
           if (response.status === 401) {
@@ -51,7 +54,7 @@ function Chat(props) {
 
     fetchActiveRooms();
 
-    const newSocket = io("http://localhost:5000", {
+    const newSocket = io("https://backend-assignment3-odn0.onrender.com/", {
       transports: ["websocket"], //phương thức truyền thông mà Socket.IO sẽ sử dụng để kết nối
     });
     setSocket(newSocket);

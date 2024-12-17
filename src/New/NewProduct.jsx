@@ -45,11 +45,14 @@ const NewProduct = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/admin/add-product", {
-        method: "POST",
-        body: data,
-        credentials: "include", // Bao gồm cookie trong yêu cầu
-      });
+      const response = await fetch(
+        "https://backend-assignment3-odn0.onrender.com/admin/add-product",
+        {
+          method: "POST",
+          body: data,
+          credentials: "include", // Bao gồm cookie trong yêu cầu
+        }
+      );
 
       const result = await response.json();
       if (response.ok) {

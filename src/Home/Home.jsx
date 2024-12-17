@@ -16,7 +16,7 @@ function Home(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:5000/admin";
+        const url = "https://backend-assignment3-odn0.onrender.com/admin";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {

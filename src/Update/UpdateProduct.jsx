@@ -17,7 +17,7 @@ const UpdateProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       const response = await fetch(
-        `http://localhost:5000/admin/edit-product/${id}`,
+        `https://backend-assignment3-odn0.onrender.com/admin/edit-product/${id}`,
         {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -42,7 +42,6 @@ const UpdateProduct = () => {
     });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Tạo FormData từ state
@@ -58,7 +57,7 @@ const UpdateProduct = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:5000/admin/edit-product/${id}`,
+        `https://backend-assignment3-odn0.onrender.com/admin/edit-product/${id}`,
         {
           method: "PUT",
           body: data,
@@ -86,7 +85,6 @@ const UpdateProduct = () => {
       console.error("Error:", error);
       alert("Đã xảy ra lỗi khi gửi yêu cầu!");
     }
-
   };
 
   return (

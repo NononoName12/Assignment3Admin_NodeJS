@@ -114,7 +114,7 @@ function Products(props) {
     if (confirmDelete) {
       try {
         const response = await fetch(
-          `http://localhost:5000/admin/product/${id}`,
+          `https://backend-assignment3-odn0.onrender.com/admin/product/${id}`,
           {
             method: "DELETE",
             headers: {

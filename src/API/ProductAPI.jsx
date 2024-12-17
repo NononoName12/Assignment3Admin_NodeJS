@@ -1,6 +1,6 @@
 const ProductAPI = {
   getAPI: async (navigate) => {
-    const url = "http://localhost:5000/admin/products";
+    const url = "https://backend-assignment3-odn0.onrender.com/admin/products";
     const response = await fetch(url, {
       method: "GET", // Chỉ định phương thức GET
       headers: {
@@ -28,7 +28,7 @@ const ProductAPI = {
   },
 
   getPagination: async (query) => {
-    const url = `http://localhost:5000/admin/products/pagination${query}`;
+    const url = `https://backend-assignment3-odn0.onrender.com/admin/products/pagination${query}`;
     const response = await fetch(url, {
       method: "GET",
       headers: {
@@ -45,7 +45,7 @@ const ProductAPI = {
   },
 
   getPaginationUser: async (query) => {
-    const url = `http://localhost:5000/admin/users/pagination${query}`;
+    const url = `https://backend-assignment3-odn0.onrender.com/admin/users/pagination${query}`;
     const response = await fetch(url, {
       method: "GET",
       headers: {

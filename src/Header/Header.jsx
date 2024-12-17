@@ -21,10 +21,13 @@ function Header(props) {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/auth/logout", {
-        method: "POST",
-        credentials: "include", // Đảm bảo gửi cookie nếu cần
-      });
+      const response = await fetch(
+        "https://backend-assignment3-odn0.onrender.com/auth/logout",
+        {
+          method: "POST",
+          credentials: "include", // Đảm bảo gửi cookie nếu cần
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -41,7 +44,7 @@ function Header(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:5000/admin";
+        const url = "https://backend-assignment3-odn0.onrender.com/admin";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {

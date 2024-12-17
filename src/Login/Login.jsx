@@ -17,14 +17,17 @@ const Login = () => {
     };
     console.log(inputLogin);
     try {
-      const response = await fetch("http://localhost:5000/auth/signin", {
-        method: "POST", // Chỉ định phương thức POST
-        headers: {
-          "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
-        },
-        body: JSON.stringify(inputLogin), // Chuyển đổi inputLogin thành chuỗi JSON và thêm vào body
-        credentials: "include", // Bao gồm cookie trong yêu cầu
-      });
+      const response = await fetch(
+        "https://backend-assignment3-odn0.onrender.com/auth/signin",
+        {
+          method: "POST", // Chỉ định phương thức POST
+          headers: {
+            "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
+          },
+          body: JSON.stringify(inputLogin), // Chuyển đổi inputLogin thành chuỗi JSON và thêm vào body
+          credentials: "include", // Bao gồm cookie trong yêu cầu
+        }
+      );
 
       const responseData = await response.json();
       if (!response.ok) {

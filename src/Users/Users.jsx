@@ -56,7 +56,7 @@ function Users(props) {
   useEffect(() => {
     const fetchAllData = async () => {
       try {
-        const url = "http://localhost:5000/admin/users";
+        const url = "https://backend-assignment3-odn0.onrender.com/admin/users";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -133,7 +133,7 @@ function Users(props) {
     if (confirmDelete) {
       try {
         const response = await fetch(
-          `http://localhost:5000/admin/delete-user/${id}`,
+          `https://backend-assignment3-odn0.onrender.com/admin/delete-user/${id}`,
           {
             method: "DELETE",
             headers: {

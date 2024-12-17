@@ -15,7 +15,7 @@ const UpdateUser = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       const response = await fetch(
-        `http://localhost:5000/admin/edit-user/${id}`,
+        `https://backend-assignment3-odn0.onrender.com/admin/edit-user/${id}`,
         {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -53,7 +53,7 @@ const UpdateUser = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/admin/edit-user/${id}`,
+        `https://backend-assignment3-odn0.onrender.com/admin/edit-user/${id}`,
         {
           method: "PUT",
           headers: {
